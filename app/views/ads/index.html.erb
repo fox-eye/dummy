@@ -1,0 +1,4 @@
+<h1>INDEX</h1>
+<% @ads.each do |ad| %>
+	<%= image_tag ad.photo.url(:thumb) %>
+<% end %>
