@@ -1,7 +1,11 @@
 Dummy::Application.routes.draw do
   get "categories/index"
   
-  get "categories/get_sub_cat"
+  #get "categories/get_sub_cat"
+  
+  resources :ads
+  match "json/get_sub_cat/:id" => "categories#get_sub_cat"
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
